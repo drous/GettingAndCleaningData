@@ -38,7 +38,6 @@ colnames(dataTable) <- dataFeatures$featureName
 #Read activity_labels.txt and use it to name the columns
 activityLbl<- tbl_df(read.table(file.path(filesPath, "activity_labels.txt")))
 setnames(activityLbl, names(activityLbl), c("activityNum","activityName"))
-setnames(merDataAct, "V1", "activityNum")
 
 # Merge columns
 merDataSubjAct<- cbind(merDataSubj, merDataAct)
